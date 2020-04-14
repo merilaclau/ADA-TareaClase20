@@ -1,0 +1,137 @@
+body {
+    background-color: #73653e;
+    font-family: 'Source Code Pro', monospace;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+header {
+    background-color: #0a212b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 5px;
+}
+
+.logo {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #bba18c;
+    font-size: 20px;
+}
+
+.fa-pastafarianism {
+    color: #bba18c;
+    font-size: 25px;
+    margin: 15px;
+    transition: transform 0.4s linear;
+}
+
+.fa-pastafarianism:hover {
+    transform: scale(1.1) translate(2px,2px);
+}
+
+.fa-bars {
+    color: #bba18c;
+    font-size: 25px;
+    margin: 15px;
+}
+
+.desktop-navbar a {
+    color: #bba18c;
+    font-size: 15px;
+    margin: 15px;
+    padding: 5px;
+    text-decoration: none;
+
+}
+
+.desktop-navbar a:hover {
+    color: pink;
+}
+
+.fa-rocket {
+    color: #bba18c;
+    font-size: 25px;
+    margin: 15px;
+    padding: 5px;
+    transition: transform 1s linear;
+}
+
+.fa-rocket:hover {
+    transform: rotate(720deg);
+}
+
+@media (min-width: 10px) {
+    .desktop-navbar {
+        display: none; 
+    }
+  }
+
+@media (min-width: 1024px) {
+    .img-breakpoint4 {
+        background-image: url('https://media.giphy.com/media/NDJWGU4n74di0/giphy.gif');
+        background-position: -105px 0px;
+        height: 600px;
+    }
+
+    .fa-bars {
+        visibility: hidden;
+    }
+
+    .desktop-navbar {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+/*@media (min-width: 320px) {
+    .p-breakpoint1 {
+        color: palevioletred;
+        position: absolute;
+        top: 40vh;
+        padding: 25px;
+    }
+
+    .p-breakpoint2,
+    .p-breakpoint3,
+    .img-breakpoint4 {
+        visibility: hidden;
+    }    
+}
+
+@media (min-width: 414px) {
+    .p-breakpoint2 {
+        color: rgb(83, 96, 168);
+        display: static;
+        position: absolute;
+        top: 40vh;
+        padding: 25px;
+    }
+
+    .p-breakpoint3,
+    .img-breakpoint4 {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 955px) {
+    .p-breakpoint3 {
+        color: rgb(247, 163, 67);
+        position: absolute;
+        top: 40vh;
+        padding: 25px;
+    }
+    
+    .img-breakpoint4 {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1024px) {
+    .img-breakpoint4 {
+        width: 60%;
+    }
+}*/
