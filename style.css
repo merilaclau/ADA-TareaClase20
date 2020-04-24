@@ -8,12 +8,14 @@ body {
 }
 
 header {
+    align-items: center;
     background-color: #0a212b;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    padding: 5px;
+    height: 14vh;
+    padding: 30px;
+    position: relative;
 }
 
 .logo {
@@ -25,7 +27,6 @@ header {
 .fa-pastafarianism {
     color: #bba18c;
     font-size: 25px;
-    margin: 15px;
     transition: transform 0.4s linear;
 }
 
@@ -34,29 +35,57 @@ header {
 }
 
 .fa-bars {
+    background-color: #0a212b;
     color: #bba18c;
     font-size: 25px;
-    margin: 15px;
+}
+
+.desktop-navbar {
+    background-color: #0a212b;
+    position: absolute;
+    left: 0;
+    padding: 25px 0 15px 0;
+    text-align: center;
+    top: 14vh;
+    width: 100%;
+    z-index: 10;
+}
+    
+nav a {
+    display: block;
 }
 
 .desktop-navbar a {
     color: #bba18c;
+    display: block;
     font-size: 15px;
-    margin: 15px;
-    padding: 5px;
+    padding: 15px;
     text-decoration: none;
-
 }
 
 .desktop-navbar a:hover {
     color: pink;
 }
 
+.menu-button {
+    align-self: center;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+.menu-button label {
+    display: inline-block;
+    padding: 0;
+}
+
+#input-button:checked ~ nav {
+    display: block !important;
+}
+
 .fa-rocket {
     color: #bba18c;
     font-size: 25px;
-    margin: 15px;
-    padding: 5px;
+    padding: 15px;
     transition: transform 1s linear;
 }
 
@@ -65,21 +94,15 @@ header {
 }
 
 .p-breakpoint {
+    align-items: center;
+    box-sizing: border-box;
+    color: palevioletred;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
     position: absolute;
     top: 40vh;
-    padding: 25px;
-}
-
-.p-breakpoint1 {
-    color: palevioletred;
-}
-
-.p-breakpoint2 {
-    color: rgb(83, 96, 168);
-}
-
-.p-breakpoint3 {
-    color: rgb(247, 163, 67);
+    width: 100%;    
 }
 
 .img-breakpoint4 {
@@ -91,10 +114,10 @@ header {
 .p-breakpoint2,
 .p-breakpoint3,
 .img-breakpoint4,
-.desktop-navbar {
+.desktop-navbar,
+#input-button {
     display: none;
-}    
-
+}
 
 @media (min-width: 414px) {
     .p-breakpoint2 {
@@ -106,7 +129,7 @@ header {
     }
 }
 
-@media (min-width: 955px) {
+@media (min-width: 768px) {
     .p-breakpoint3 {
         display: block;
     }
@@ -121,16 +144,18 @@ header {
         display: block;
     }
 
-    .fas.fa-bars {
+    .p-breakpoint3,
+    .menu-button {
         display: none;
     }
 
     .desktop-navbar {
+        background-color: transparent;
         display: flex;
-        justify-content: space-evenly;
-    }
-
-    .p-breakpoint3 {
-        display: none;
+        justify-content: space-between;
+        left: unset;
+        right: 0;
+        top: 0;
+        width: auto;
     }
 }
